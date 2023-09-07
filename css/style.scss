@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Plus&display=swap');
+//VARIABLES
+$primarytext: 'Montserrat', sans-serif; 
+$primarycolor: white;
+
+// KEYFRAMES
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
+
+*{
+    text-decoration: none;
+}
+
+h1 {
+  font-size: 2rem;
+  font-family: $primarytext;
+}
+
+.navbar {
+    background: black; 
+    font-family: $primarytext; 
+    padding-right: 15px;
+    padding-left: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    border-bottom-style: outset;
+    border-color: teal;
+  .nav-links {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+    .nav-item a {
+        display: inline-block;
+        padding: 15px 5px;
+        text-decoration: none;
+        color: white;
+        font-size: 1.2em
+    }
+  }
+}
+
+
+
+li a:hover {
+  background-color: teal;
+  cursor: pointer;
+}
+  
+
+body {
+    font-family: $primarytext;
+    background-color: #8E8E8E;
+  }
+  
+.selfiepic {
+  max-width: 75%;
+  height: auto;
+  border-style: dotted;
+  border-color: white;
+  margin: 1em;
+  
+}
+  p {
+    color: $primarycolor;
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+    margin: 16px 32px;
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-areas:
+      "one one two two"
+      "three three three three";
+    gap: 1.7em;
+    min-height: 80vh;
+    margin-top: 2rem;
+  }
+  
+  .gwelcome{
+    grid-area: one;
+    height: auto;
+  }
+  
+  .gpic {
+    grid-area: two;
+    text-align: center;
+  }
+
+  .gcontact {
+    grid-area: three;
+    color: white;
+  }
+  
+  .grid-item {
+    background-color: #301934;
+    padding: 1rem;
+    border-style: outset;
+    border-color: white;
+    border-radius: 8px;
+  }
+  
+  h2 {
+    border-style: solid;
+    text-align: center;
+    background-color: white;
+  }
+
+  .brandlink{
+    color: white;
+    
+    &:hover {
+        color:teal;
+    }
+  }
+
+  .quote {
+    font-size: 1.5em;
+    font-weight: bold;
+    float: left;
+    margin-right: 5px;
+    color: black; 
+  }
+
+  .quote::before {
+    content: "“"; 
+    font-size: 2em;
+    color: teal;
+  }
+
+  .quote::after {
+    content: "”"; 
+    font-size: 1em;
+    color: teal;
+  }
+
+  .author {
+    text-align: right;
+    margin-top: 10px;
+    font-style: italic;
+    margin-right: 15px;
+    color: black;
+  }
+
+  .quote-container {
+    border: 1px solid #ddd;
+    padding: 20px;
+    max-width: 500px;
+    margin: 25px auto;
+    background-color: #f5f5f5;
+  }
+
+  .wbutton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button {
+      font-size: 1.25rem;
+      color: black;
+      background-color: white;
+      border-style: solid;
+      border-color: teal;
+      border-width: 4px;
+      margin: 10px 5px;
+      padding: 8px 16px;
+      animation: wiggle 2s linear;
+      
+      &:hover {
+        background-color: teal;
+        color: white;
+        }
+      }
+    }
+
+    .fsubmit {
+      font-size: 1.25rem;
+      color: black;
+      background-color: white;
+      border-style: solid;
+      border-color: teal;
+      border-width: 4px;
+      margin: 10px 5px;
+      padding: 8px 16px;
+      &:hover {
+        background-color: teal;
+        color: white;
+        }
+    }
+
+    #fheading {
+      color: black;
+    }
+
+    .footercontact {
+      text-align: left;
+      margin: auto;
+      display: table;
+    }
+
+    .aboutuspic {
+      float: right;
+    }
+
+    //ABOUT US CSS
+
+    .grid-container-about-us {
+      display: grid;
+      grid-template-areas: 
+        "one one two two"
+        "three three four four";
+        gap: 1em;
+        max-height: 20vh;
+        margin-top: 5rem;
+
+    }
+
+    .au-skills {
+      grid-area: one;
+    }
+
+    .au-boxing-pic {
+      grid-area: two;
+      text-align: center;
+    }
+
+    .au-interests {
+      grid-area: three;
+    }
+
+    .au-background {
+      grid-area: four;
+    }
+
+    .fight-pic {
+      width: 50%;
+      height: auto;
+      border-style: dotted;
+      border-color: white;
+      text-align: center;
+    }
+
+    ul li {
+    color: $primarycolor;
+    font-size: 1.2em;
+    padding: 0.5em 1em;
+    margin: 16px 32px;
+    }
+   
+    //MEDIA QUERIES
+    @media (max-width: 1023px) {
+      .grid-container {
+        display: grid;
+        grid-template-areas: 
+        "one"
+        "two"
+        "three";
+      }
+      .grid-container-about-us {
+        display: grid;
+        grid-template-areas: 
+        "one"
+        "two"
+        "three"
+        "four";
+      }
+    }
+    
