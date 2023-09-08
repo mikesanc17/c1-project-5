@@ -263,4 +263,11 @@ ul li {
     display: grid;
     grid-template-areas: "one" "two" "three" "four";
   }
+}
+#linkedin-logo {
+  width: 3%;
+}
+
+#github-logo {
+  width: 3%;
 }/*# sourceMappingURL=style.css.map */
